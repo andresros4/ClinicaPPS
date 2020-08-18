@@ -1,0 +1,45 @@
+RewriteEngine On
+
+RewriteRule ^home$ controllers/home.php 
+
+
+
+RewriteRule ^buscadorPacientes$ controllers/buscadorPacientes.php 
+RewriteRule ^historiaClinica$ controllers/historiaCli.php 
+RewriteRule ^historiaClinica-([0-9]+)$ controllers/historiaCli.php?id=$1
+
+
+
+
+
+RewriteRule ^turnosPrestaciones$ controllers/turnos-prestaciones.php
+RewriteRule ^turnosPrestacionesEdit-([0-9]+)$ controllers/turnos-prestaciones-edit.php?id=$1
+RewriteRule ^turnosPrestacionesEdit$ controllers/turnos-prestaciones-edit.php
+RewriteRule ^turnosPrestacionesAdd$ controllers/turnos-prestaciones-add.php
+RewriteRule ^turnosPrestacionesCancel-([0-9]+)$ controllers/turnos-prestaciones-cancel.php?id=$1
+
+
+RewriteRule ^login$ controllers/login.php
+RewriteRule ^registro$ controllers/registro.php 
+RewriteRule ^logout$ controllers/logout.php 
+RewriteRule ^agregarHistoriaClinica-([0-9]+)$ controllers/agregarHistoriaClinica.php?id=$1
+RewriteRule ^verArchivos-([0-9]+)$ controllers/verArchivos.php?id=$1
+
+
+RewriteRule ^agregarUsuario$ controllers/agregarUsuario.php 
+RewriteRule ^listaUsuarios$ controllers/listaUsuarios.php 
+RewriteRule ^usuariosEliminar-([0-9]+)$ controllers/usuarios-eliminar.php?id=$1
+RewriteRule ^usuariosEdit-([0-9]+)-([0-9]+)$ controllers/usuarios-edit.php?id=$1&tipo=$2
+
+RewriteRule ^clientesEdit-([0-9]+)$ controllers/clientes-edit.php?id=$1
+
+
+RewriteRule ^agregarEspecialidad$ controllers/agregarEspecialidad.php 
+RewriteRule ^listaEspecialidades$ controllers/listaEspecialidades.php 
+RewriteRule ^especialidadEdit-([0-9]+)$ controllers/especialidad-edit.php?id=$1
+RewriteRule ^especialidadEliminar-([0-9]+)$ controllers/especialidad-eliminar.php?id=$1
+
+RewriteRule ^agregarObraSocial$ controllers/agregarObraSocial.php 
+RewriteRule ^listaObrasSociales$ controllers/listaObrasSociales.php 
+RewriteRule ^obraSocialEdit-([0-9]+)$ controllers/obraSocial-edit.php?id=$1
+RewriteRule ^obraSocialEliminar-([0-9]+)$ controllers/obraSocial-eliminar.php?id=$1
